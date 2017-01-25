@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: 'utf8'
+
+test:
+  <<: *default
+  url: ENV['DATABASE_URL_TEST']
+
+development:
+  <<: *default
+  url: ENV['DATABASE_URL_DEV']
+
+production:
+  <<: *default
+  url: ENV['DATABASE_URL']

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+rack_env=$RACK_ENV
+
+if [ -z $rack_env ];
+then
+  rack_env='development'
+fi
+
+RACK_ENV=$rack_env bundle exec pry -r ./all_requires.rb
