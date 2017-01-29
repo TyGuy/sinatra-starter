@@ -12,7 +12,6 @@ def database_url
 end
 
 Server.configure :production, :development, :test do
-  binding.pry
   db = URI.parse(database_url)
 
   ActiveRecord::Base.establish_connection(
