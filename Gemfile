@@ -10,6 +10,7 @@ gem 'sinatra-activerecord'
 gem 'sidekiq'
 gem 'dotenv'
 gem 'pry'
+gem 'rake'
 
 group :test do
   gem 'rspec'
